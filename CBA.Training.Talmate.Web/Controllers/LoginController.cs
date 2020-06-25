@@ -40,7 +40,8 @@ namespace CBA.Training.Talmate.Web.Controllers
             {
                 using (var client = new HttpClient())
                 {
-                    string baseUri = _settings.ApiUrl + "/" + Constants.Token + "/";
+                    //string baseUri = _settings.ApiUrl + "/" + Constants.Token + "/";
+                    string baseUri = "https://webapilatesttal.azurewebsites.net";
                     client.BaseAddress = new Uri(baseUri);
                     client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

@@ -8,5 +8,7 @@ namespace CBA.Training.Talmate.Web.Comman
     public class NewTestCls
     {
         public string empname { set; get; }
+
+        public string empaddress { get; set; }
     }
 }

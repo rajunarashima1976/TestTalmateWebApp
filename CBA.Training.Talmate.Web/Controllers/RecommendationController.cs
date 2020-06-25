@@ -30,7 +30,8 @@ namespace CBA.Training.Talmate.Web.Controllers
             var recommendation = new List<Recommendation>();
             using (var client = new HttpClient())
             {
-                string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Seek + "/";
+                //string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Seek + "/";
+                string baseUri = "https://webapilatesttal.azurewebsites.net/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Seek + "/";
                 client.BaseAddress = new Uri(baseUri);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("JWTToken"));
@@ -50,8 +51,10 @@ namespace CBA.Training.Talmate.Web.Controllers
             
                 using (var client = new HttpClient())
                 {
-                    string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.RouteRecommendation + "/"; 
-                    client.BaseAddress = new Uri(baseUri);
+                //string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.RouteRecommendation + "/"; 
+                //Constants.Recommendation + "/" + Constants.Seek + "/";
+                string baseUri = "https://webapilatesttal.azurewebsites.net/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.RouteRecommendation + "/"; ;
+                client.BaseAddress = new Uri(baseUri);
                     client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("JWTToken"));
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -81,7 +84,8 @@ namespace CBA.Training.Talmate.Web.Controllers
             var recommendations = new List<Recommendation>();
             using (var client = new HttpClient())
             {
-                string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/";
+                //string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/";
+                string baseUri = "https://webapilatesttal.azurewebsites.net/" + Constants.API + "/" + Constants.Recommendation + "/";
                 client.BaseAddress = new Uri(baseUri);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("JWTToken"));
@@ -101,7 +105,8 @@ namespace CBA.Training.Talmate.Web.Controllers
 
             using (var client = new HttpClient())
             {
-                string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Accept + "/";
+                //string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Accept + "/";
+                string baseUri = "https://webapilatesttal.azurewebsites.net/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Accept + "/";
                 client.BaseAddress = new Uri(baseUri);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("JWTToken"));
@@ -134,7 +139,9 @@ namespace CBA.Training.Talmate.Web.Controllers
 
             using (var client = new HttpClient())
             {
-                string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Reject + "/";
+                //string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Reject + "/";
+                //string baseUri= "+Constants.API + "/" + Constants.Recommendation + "/" + Constants.Accept + "/"
+                string baseUri = "https://webapilatesttal.azurewebsites.net/" + Constants.API + "/" + Constants.Recommendation + "/" + Constants.Reject + "/";
                 client.BaseAddress = new Uri(baseUri);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("JWTToken"));

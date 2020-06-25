@@ -38,7 +38,8 @@ namespace CBA.Training.Talmate.Web.Controllers
             {
                 using (var client = new HttpClient())
                 {
-                    string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Demand + "/";
+                    //string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Demand + "/";
+                    string baseUri = "https://webapilatesttal.azurewebsites.net/" + Constants.API + "/" + Constants.Demand + "/";
                     client.BaseAddress = new Uri(baseUri);
                     client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("JWTToken"));
@@ -71,7 +72,8 @@ namespace CBA.Training.Talmate.Web.Controllers
             var demand = new List<Demand>();
             using (var client = new HttpClient())
             {
-                string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Demand + "/";
+                //string baseUri = _settings.ApiUrl + "/" + Constants.API + "/" + Constants.Demand + "/";
+                string baseUri = "https://webapilatesttal.azurewebsites.net/" + Constants.API + "/" + Constants.Demand + "/";
                 client.BaseAddress = new Uri(baseUri);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("JWTToken"));
